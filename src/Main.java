@@ -1,17 +1,13 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-    //Need to show Subscribers for both of theme
+            ArrayList<Streaming> Service = new ArrayList();
+
         LocalDate localDate1 = LocalDate.of(2007, 1, 16);
-
-
-        Date date1 = new Date (2007, 1, 16);
-
-    Streaming streaming1 = new Streaming(localDate1,": Netflix ",235000000,": Netflix Originals,");
-        System.out.println(streaming1);
     }
 }
 
