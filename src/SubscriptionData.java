@@ -1,41 +1,25 @@
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Sub extends Streaming{
+public class SubscriptionData extends Streaming{
 private LocalDate launch;
-private String service;
-private int subscribers;
 private String content;
-private String owner;
 private String place;
 
-    public Sub(LocalDate launch, String service, int subscribers, String content, String owner, String place) {
-        super(launch, service, subscribers, content, owner, place);
-        this.launch = launch;
-        this.service = service;
-        this.subscribers = subscribers;
+    public SubscriptionData(String launch,  String content, String place) {
+        super(launch, content, place);
+        this.launch = LocalDate.parse(launch);
         this.content = content;
-        this.owner = owner;
         this.place = place;
     }
-
-    public Sub(String service, String owner, LocalDate lauch, double subscribers, String content, String place) {
+    public SubscriptionData(String service, String owner, LocalDate lauch, double subscribers, String content, String place) {
         super();
     }
 
-    public String getService() {
-        return service;
-    }
-
-    public void setService(String service) {
-        this.service = service;
-    }
 
     public int getSubscribers() {
         return getSubscribers();
@@ -85,7 +69,7 @@ private String place;
             double subscribers = dataScanner.nextLong();
             String content = dataScanner.next();
             String place = dataScanner.next();
-            Sub newSub = new Sub(service,owner, LocalDate.parse(lauch),subscribers,content,place);
+            SubscriptionData newSub = new SubscriptionData(service,owner, LocalDate.parse(lauch),subscribers,content,place);
             System.out.println(newSub);
         }
 
