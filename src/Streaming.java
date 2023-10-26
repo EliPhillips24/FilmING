@@ -32,9 +32,6 @@ public class Streaming {
         Subscribers = subscribers;
     }
 
-    public void setPlace(String Place) {
-        Place = Place;
-    }
     public String getOwner() {
         return Owner;
     }
@@ -43,6 +40,13 @@ public class Streaming {
         Owner = Owner;
     }
 
+    public String getParent() {
+        return Parent;
+    }
+
+    public void setParent(String Parent) {
+        Parent = Parent;
+    }
 
 
 }
