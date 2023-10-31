@@ -22,6 +22,9 @@ this.Parent = Parent;
 
     }
 
+    public Streaming() {
+
+    }
 
 
     public String getService() {
@@ -29,7 +32,7 @@ this.Parent = Parent;
     }
 
     public void setService(String service) {
-        this.service = service;
+        service = service;
     }
 
     public int getSubscribers() {
@@ -58,27 +61,9 @@ this.Parent = Parent;
     public  String toString() {
         return "The service is " + getService() + "The amount of subscribers are " + getSubscribers()+ "The owner is " + getOwner() + " The parrent comapny is " + getOwner();
     }
-    public static void readData() throws Exception {
-        File dataFile = new File("src/Streamig");
-        Scanner dataScanner = new Scanner(dataFile);
-        dataScanner.useDelimiter("\t|\n");
-        while (dataScanner.hasNext()) {
 
-            String service = dataScanner.next();
 
-            String owner = dataScanner.next();
 
-            String lauch = dataScanner.next();
-            DateTimeFormatter formatter = new DateTimeFormatterBuilder()
-                    .parseCaseInsensitive()
-                    .append(DateTimeFormatter.ofPattern("MMMM d, uuuu"))
-                    .toFormatter(Locale.ENGLISH);
-            double subscribers = dataScanner.nextLong();
-            String content = dataScanner.next();
-            String place = dataScanner.next();
-            SubscriptionData newSub = new SubscriptionData(service,owner, LocalDate.parse(lauch),subscribers,content,place);
-            System.out.println(newSub);
-        }
 
-    }
+
 }
