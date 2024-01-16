@@ -12,8 +12,11 @@ private String content;
     public SubscriptionData(String service,String Owner,  LocalDate launch ,  int Subscribers , String content , String Parent) {
         super(service, Subscribers, Owner, Parent);
         this.launch = launch;
-        this.content = content;
+this.content = content;
+
     }
+
+
 
     public LocalDate getLaunch() {
         return launch;

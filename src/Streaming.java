@@ -59,7 +59,7 @@ this.Parent = Parent;
         Parent = Parent;
     }
     public  String toString() {
-        return "The service is " + getService() + "The amount of subscribers are " + getSubscribers()+ "The owner is " + getOwner() + " The parrent comapny is " + getOwner();
+        return "The Streaming is " + getService() + "The amount of subscribers are " + getSubscribers()+ "The owner is " + getOwner() + " The parrent comapny is " + getOwner();
     }
 
 
